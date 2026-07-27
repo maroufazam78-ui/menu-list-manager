@@ -1,5 +1,5 @@
 const additems = document.querySelector('.add-items');
-const itmeslist = document.querySelector('.plates');
+const itmesList = document.querySelector('.plates');
 
 
 const items = JSON.parse(localStorage.getItem('items')) || [];
@@ -12,7 +12,7 @@ const item = {
   done:false
 };
 items.push(item);
-populatelist(items,itmeslist);
+populatelist(items,itmesList);
 localStorage.setItem('items',JSON.stringify(items));
 this.reset();
 
@@ -35,11 +35,11 @@ function toggleDone (e){
   const index = el.dataset.index
   items[index].done = !items[index].done;
   localStorage.setItem('items',JSON.stringify(items));
-  populatelist(items, itmeslist);
+  populatelist(items, itmesList);
 
 };
 
 
 additems.addEventListener('submit',additem);
-itmeslist.addEventListener('click', toggleDone);
-populatelist(items, itmeslist);
+itmesList.addEventListener('click', toggleDone);
+populatelist(items, itmesList);
