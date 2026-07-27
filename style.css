@@ -39,9 +39,6 @@ h2{
   flex: 1;
   cursor: pointer;
 }
-/* .plates input {
-  display: none;
-} */
 .plates input + label :before {
   content: '⬜️';
   margin-right: 10px;
